@@ -1,3 +1,9 @@
+Crypto Punch
+
+## UI
+ui is designed with nextjs from different designers such as shadcn, aceternity and magicui
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
