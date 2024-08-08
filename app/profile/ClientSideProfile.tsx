@@ -11,7 +11,6 @@ import { FaUserPen } from "react-icons/fa6";
 import { useAppContext } from "@/context";
 
 function ClientSideProfile () {
-    let token = ''
     const { user, setUser } = useAppContext();
     const [profile, setProfile] = useState('');
     const [self, setSelf] = useState(false);
@@ -38,7 +37,6 @@ function ClientSideProfile () {
                 setSelf(true);
             }else {
                 try {
-                    console.log("ids mismatch .....  ")
                     const response = await fetch(`http://127.0.0.1:8000/api/user/get/${id}`, {
                         method: 'GET',
                         headers: {
@@ -63,6 +61,10 @@ function ClientSideProfile () {
 
         fetchUser();
     }, []);
+
+    useEffect(() => {   // check self when user or profile change
+        setSelf(profile.id === user.id);
+    }, [user, profile]);
 
     if (not_found && user==='') return notFound()
     

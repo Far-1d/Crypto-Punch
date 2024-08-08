@@ -9,7 +9,6 @@ import {
 import { cn } from '@/lib/utils';
 import { getUserFromToken } from '@/lib/jwt';
 import { toast } from 'sonner';
-import { redirect } from 'next/navigation';
 
 const LoginDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
     let token = '';
@@ -87,6 +86,7 @@ const LoginDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
 
           return () => clearTimeout(clearErrorsTimeout);
       }, [isOpen, error]);
+      
   return (
     <div>
         <Dialog open={isOpen} onOpenChange={handleClose}>

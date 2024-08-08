@@ -1,3 +1,7 @@
+// import { useAppContext } from "@/context";
+// import { getUserFromToken } from "./jwt";
 export function LogoutUser() {
-    const token = localStorage.removeItem('token');
+    // const { user, setUser } = useAppContext();
+    sessionStorage.removeItem('token');
+    // setUser(getUserFromToken())
 }
