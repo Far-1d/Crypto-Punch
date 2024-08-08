@@ -1,16 +1,22 @@
 'use client';
-import React from 'react'
+import React, { useMemo } from 'react'
 import { TracingBeam } from "@/components/aceternity/traceBeam";
 import BlurIn from "@/components/magic/blurIn";
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import { comments } from '@/data/staff_comments';
-import {BackgroundGradient} from '@/components/aceternity/backgroundGradient'
-import { MapContainer } from 'https://cdn.esm.sh/react-leaflet/MapContainer'
-import { TileLayer } from 'https://cdn.esm.sh/react-leaflet/TileLayer'
-import { useMap } from 'https://cdn.esm.sh/react-leaflet/hooks'
+// import Map from '@/components/sub/Map';
+import dynamic from 'next/dynamic';
 
 const ClientSideAbout = () => {
+  const Map = useMemo(() => dynamic(
+    () => import('@/components/sub/Map'),
+    { 
+      loading: () => <p>A map is loading</p>,
+      ssr: false
+    }
+  ), [])
+  
   return (
     <div>
         <BlurIn
@@ -172,19 +178,8 @@ const ClientSideAbout = () => {
           </div>
         </section>
         
-        <section>
-        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[51.505, -0.09]}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer>
-
+        <section className='flex w-full max-h-80 px-4 py-10 overflow-hidden'>
+            <Map/>
         </section>
       </TracingBeam>
     </div>
@@ -192,3 +187,4 @@ const ClientSideAbout = () => {
 }
 
 export default ClientSideAbout
+
