@@ -7,7 +7,7 @@ import {
 import { ModeToggle } from "@/components/mode-toggle";
 import { Logo } from './logo';
 import Link from 'next/link';
-import { UserNav } from './chart/user-nav';
+import { UserNav } from './sub/user-nav';
 
 const Navigation = () => {
   return (

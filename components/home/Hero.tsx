@@ -22,11 +22,11 @@ const Hero = () => {
                     </div>
                   </div>
                   <div className='h-10'>
-                  <WordRotate
-                  className="inline text-xl sm:text-4xl text-black dark:text-white"
-                  words={["Market News", "Blockchain Data", "Onboard Chart", "Asset Analytic"]}
-                  
-                  /></div>
+                    <WordRotate
+                      className="inline text-xl sm:text-4xl text-black dark:text-white"
+                      words={["Market News", "Blockchain Data", "Onboard Chart", "Asset Analytic"]}  
+                    />
+                  </div>
                   <span className='pt-10 sm:pt-16 w-1/2 text-sm text-center'>Our goal is to bring you simple Crypto data using different API endpoints. scroll down and use our integrated Crypto functionalities.</span>
                   
               </div>

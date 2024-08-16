@@ -88,11 +88,10 @@ export function WobbleCardDemo() {
         >
           <div className="max-w-xs">
             <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              Gippity AI powers the entire universe
+              Empowers users with fast on-hand data
             </h2>
             <p className="mt-4 text-left  text-base/6 text-neutral-200">
-              With over 100,000 mothly active bot users, Gippity AI is the most
-              popular AI platform for developers.
+              Over 99.99% uptime, as fast as 0.62 sec response time, servers in 6 country, and much more ...
             </p>
           </div>
           <div className="z-[-1] absolute  left-10 sm:left-40 lg:left-[45%] top-60 lg:top-32">
@@ -107,10 +106,10 @@ export function WobbleCardDemo() {
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-neutral-900">
           <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            No shirt, no shoes, no weapons.
+            Never go for less
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            If someone yells “stop!”, goes limp, or taps out, the fight is over.
+            Compare our services, if you find better ones you'd recieve a free 6 month premium plan. rest asure you can't :)
           </p>
         </WobbleCard>
         <WobbleCard containerClassName="group col-span-1 md:col-span-3 bg-neutral-950 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">

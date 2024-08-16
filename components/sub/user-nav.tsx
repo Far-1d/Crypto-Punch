@@ -23,6 +23,7 @@ import { getUserFromToken } from "@/lib/jwt";
 import { LogoutUser } from "@/lib/logout";
 import { useAppContext } from "@/context";
 
+
 export function UserNav() {
     const [isSignupOpen, setIsSignupOpen] = useState(false);
     const [isLoginOpen, setIsLoginOpen] = useState(false);

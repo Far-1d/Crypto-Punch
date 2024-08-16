@@ -9,7 +9,7 @@ import {
 import { LuAlignJustify } from "react-icons/lu";
 import { ModeToggle } from './mode-toggle';
 import Link from 'next/link';
-import { UserNav } from './chart/user-nav';
+import { UserNav } from './sub/user-nav';
 
 
 const NavigationSmall = () => {

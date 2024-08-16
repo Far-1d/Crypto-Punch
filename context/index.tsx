@@ -8,7 +8,7 @@ export function AppWrapper({children}:{
     children: React.ReactNode;
 }) {
     let [user, setUser] = useState(getUserFromToken())
-
+    
     return (
         <AppContext.Provider value={{
             user,

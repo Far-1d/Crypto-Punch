@@ -29,4 +29,10 @@ export const comments = [
         comment: "Crypto Punch has simplified our operations significantly. The API's robust features allow us to monitor transactions effortlessly, ensuring that our platform remains secure and efficient. We’re thrilled with the level of service and the quality of the data we receive",
         src: "/David.jpg"
     },
+    {
+        name: "Johnatan bosche",
+        position: "Human Resources",
+        comment: "At Crypto Punch we look for the best people to be able to create the best stuff. Anything is acheivable if the right people are around you, and be sure that we gathered the best there is because we care.",
+        src: "/Johnatan.jpg"
+    },
 ]

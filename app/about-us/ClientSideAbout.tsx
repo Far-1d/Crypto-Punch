@@ -153,9 +153,9 @@ const ClientSideAbout = () => {
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-12'>
               {comments.map((comment, idx) => (
-                <div className="col-span-1 rounded-[22px] mx-6 sm:mx-0 p-4 sm:p-4 bg-neutral-100 dark:bg-neutral-950 ease-in-out
+                <div className={`col-span-1 rounded-[22px] mx-6 sm:mx-0 p-4 sm:p-4 bg-neutral-100 dark:bg-neutral-950 ease-in-out
                   hover:drop-shadow-2xl drop-shadow-2xl sm:drop-shadow-none 
-                  hover:dark:shadow-lg hover:dark:shadow-neutral-700 dark:shadow-lg dark:shadow-neutral-700 sm:dark:shadow-none duration-300">
+                  hover:dark:shadow-lg hover:dark:shadow-neutral-700 dark:shadow-lg dark:shadow-neutral-700 sm:dark:shadow-none duration-300`}>
                     <Image src={comment.src} alt="" width={100} height={100}
                     className="w-24 h-24 rounded-full mx-auto aspect-square my-2 " />
                     <div className="pt-6 text-center space-y-4">

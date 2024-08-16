@@ -9,8 +9,9 @@ import {
   } from "@/components/shadcn/dialog"
 import { cn } from '@/lib/utils'
 import { toast } from 'sonner';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import {getUserFromToken} from '@/lib/jwt';
+import Link from 'next/link';
 
 const SignupDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
     let token = '';
@@ -21,7 +22,8 @@ const SignupDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
     const [errorp2, setErrorp2] = useState<string | null>(null)
     const [error, setError] = useState<string | null>(null)
     const [open, setOpen] = useState(false);
-
+    const {push} = useRouter();
+    
     useEffect(() => {
       const clearErrorsTimeout = setTimeout(() => {
           setErrorUser(null);
@@ -35,13 +37,20 @@ const SignupDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
       }, [errorUser, errorEmail, errorp1, errorp2, error]);
     
     const openToast = () => {
+      
       const user = getUserFromToken();
       toast("Your account created successfully", {
         description: "check your email for verification link",
         action: {
           label: "Profile",
           //@ts-ignore
-          onClick: () => redirect(`/profile?id=${user.id}`),
+          // onClick: () => push(`/profile?id=${user.id}`),
+          onClick: () => {
+            // Use Link to create a navigable link
+            <Link href={`/profile?id=${user.id}`}>
+              <a>Prof1le</a>
+            </Link>;
+          }
         },
       })
     }
@@ -95,7 +104,6 @@ const SignupDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
                 setErrorp2(null)
                 setOpen(false);
                 onclose();
-                console.log(">>>>>>>>>     ",token)
                 sessionStorage.setItem('token', token)
                 openToast();
             } else {
