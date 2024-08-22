@@ -94,11 +94,11 @@ const Footer = () => {
             
             <h1 className='heading text-lg'>Social Media</h1>
             <div className='flex flex-row sm:flex-col items-center justify-center gap-4 pt-6'>
-              <a href="#" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandInstagram/> <span className='hidden sm:flex'>Instagram</span></a>
-              <a href="#" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandLinkedin /> <span className='hidden sm:flex'>Linkedin</span></a>
-              <a href="#" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandTelegram /> <span className='hidden sm:flex'>Telegram</span></a>
-              <a href="#" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandTwitter /> <span className='hidden sm:flex'>Twitter</span></a>
-              <a href="#" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandWhatsapp /> <span className='hidden sm:flex'>Wharsapp</span></a>
+              <a href="https://instagram.com" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandInstagram/> <span className='hidden sm:flex'>Instagram</span></a>
+              <a href="https://linkedin.com" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandLinkedin /> <span className='hidden sm:flex'>Linkedin</span></a>
+              <a href="https://telegram.com" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandTelegram /> <span className='hidden sm:flex'>Telegram</span></a>
+              <a href="https://x.com" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandTwitter /> <span className='hidden sm:flex'>Twitter</span></a>
+              <a href="https://whatsapp.com" className='z-20 hover:underline flex flex-row items-center gap-2'><TbBrandWhatsapp /> <span className='hidden sm:flex'>Wharsapp</span></a>
             </div>
           </div>
           

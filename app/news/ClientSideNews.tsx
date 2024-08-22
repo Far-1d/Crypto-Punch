@@ -55,7 +55,6 @@ const ClientSideNews = () => {
         const data = await fetch_news({page, pageSize}); // Fetch news data
         if ('results' in data){
           setNewsArray(data.results); // Set the fetched data to state
-          
           const currentPage = Number(page);
 
         } else {
@@ -92,23 +91,30 @@ const ClientSideNews = () => {
           <section className="w-full my-10 mx-14 -translate-x-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-start gap-4 sm:gap-8 p-4">
             {Array.isArray(newsArray) && newsArray.map((news, idx) => (
               <motion.div 
-              initial={{ y: 100, opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 0.15 }}
-              className="col-span-1 border border-neutral-300 dark:border-neutral-800 rounded-xl shadow-xl dark:shadow-none
-              white-glassmorphism flex flex-col flex-1 h-full items-center justify-center overflow-hidden" key={idx}>
-                <Link href={`news/single?id=${news.id}`} className="h-full w-full flex flex-col items-start justify-center">
-                  <Image src={news.image} height={200} width={250} alt={news.title}
-                  className="w-full h-fit"/>
-                  <h1 className="text-lg font-bold text-left p-4">
-                    {news.title}
-                  </h1>
-                  <div className="p-4 flex flex-row justify-between items-center w-full">
-                    <small>{news.writer ? <Link href={`/profile?id=${news.writer.id}`} className="hover:underline">{news.writer.username}</Link> : "admin" }</small>
-                    <small>{news.published_at}</small>
-                  </div>
-                </Link>
+                key={idx}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)" }}
+                className="col-span-1 w-full h-full flex flex-col flex-1 items-center justify-center 
+                hover:shadow-xl dark:shadow-none shadow-sm rounded-xl"
+              >
+                <motion.div 
+                initial={{ y: 100, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.15 }}
+                className=" border border-neutral-300 dark:border-neutral-800 rounded-xl white-glassmorphism
+                 flex flex-col flex-1 h-full items-center justify-center overflow-hidden duration-200" >
+                  <Link href={`news/single?id=${news.id}`} className="h-full w-full flex flex-col items-start justify-center py-0">
+                    <Image src={news.image} height={200} width={250} alt={news.title}
+                    className="w-full h-full object-cover"/>
+                    <h1 className="text-lg font-bold text-left p-4">
+                      {news.title}
+                    </h1>
+                    <div className="p-4 flex flex-row justify-between items-center w-full">
+                      <small>{news.writer ? <Link href={`/profile?id=${news.writer.id}`} className="hover:underline">{news.writer.username}</Link> : "admin" }</small>
+                      <small>{news.published_at}</small>
+                    </div>
+                  </Link>
+                </motion.div>
               </motion.div>
             ))}
           </section>

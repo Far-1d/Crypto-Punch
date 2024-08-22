@@ -29,9 +29,9 @@ const NavigationSmall = () => {
                 <div className='flex flex-col justify-center items-center gap-1 pt-2'>
                     <Link href="/">Home</Link>
                     <Link href="/news">News</Link>
-                    <Link href="/chart">Chart</Link>
-                    <Link href="/analytics">Analytics</Link>
                     <Link href="/assets">Assets</Link>
+                    <Link href="/web3">Web 3</Link>
+                    <Link href="/analytics">Analytics</Link>
                     <Link href="/about-us">About us</Link>
                 </div>
             </DialogContent>

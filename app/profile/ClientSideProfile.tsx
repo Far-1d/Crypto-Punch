@@ -12,7 +12,7 @@ import { useAppContext } from "@/context";
 
 function ClientSideProfile () {
     const { user, setUser } = useAppContext();
-    const [profile, setProfile] = useState('');
+    const [profile, setProfile] = useState<any>('');
     const [self, setSelf] = useState(false);
     const [not_found, setNot_found] = useState(false);
     const searchParams = useSearchParams();
@@ -20,7 +20,7 @@ function ClientSideProfile () {
 
     useEffect(() => {
         const fetchUser = async () => {
-            const userData = await getUserFromToken();
+            const userData:any = await getUserFromToken();
             setUser(userData);
             if (!id) {
                 if (userData) {
