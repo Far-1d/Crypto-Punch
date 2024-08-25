@@ -87,7 +87,7 @@ export function DataTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-          {assetArray.map((asset:any, idx:any)=>(
+          {Array.isArray(assetArray) && assetArray.map((asset:any, idx:any)=>(
             <TableRow key={idx} className="h-[60px]">
               <TableCell className="max-w-10">{asset.rank}</TableCell>
               <TableCell className="min-w-64">

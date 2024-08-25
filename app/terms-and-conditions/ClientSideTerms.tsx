@@ -35,7 +35,7 @@ const ClientSideTerms = () => {
               >
                 At Crypto Punch, we are committed to protecting your privacy and safeguarding 
                 your data. As a leading cryptocurrency API service provider, we understand 
-                the importance of trust and the value of your information. That's why we have 
+                the importance of trust and the value of your information. That&apos;s why we have 
                 implemented robust security measures and adhere to strict data protection 
                 protocols to ensure that your data remains secure and confidential. 
               </motion.li>
@@ -46,7 +46,7 @@ const ClientSideTerms = () => {
               transition={{ duration: 0.5 }}
               className="py-3"
               >
-                When we say "secure", we mean it. Our platform employs multiple layers of cryptography 
+                When we say &quot;secure&quot;, we mean it. Our platform employs multiple layers of cryptography 
                 and encoding to protect your data from unauthorized access or misuse. We 
                 utilize advanced encryption techniques, such as AES-256 and RSA, to scramble 
                 your sensitive information, rendering it unreadable to anyone without the 
@@ -106,7 +106,7 @@ const ClientSideTerms = () => {
                 Your privacy is of utmost importance to us, and we will always strive to protect it. We regularly 
                 review and update our security measures and data protection practices to ensure that 
                 they remain effective and compliant with the latest regulations and industry standards. 
-                If you have any concerns or questions about our privacy practices, please don't 
+                If you have any concerns or questions about our privacy practices, please don&apos;t 
                 hesitate to contact us, We are here to listen and address your 
                 concerns to the best of our ability. 
               </motion.li>
@@ -120,7 +120,7 @@ const ClientSideTerms = () => {
                 By choosing Crypto Punch as your cryptocurrency 
                 API service provider, you can rest assured that your data is in safe hands. We are 
                 committed to earning and maintaining your trust through our unwavering dedication 
-                to privacy and security. Together, let's navigate the exciting world of cryptocurrency 
+                to privacy and security. Together, let&apos;s navigate the exciting world of cryptocurrency 
                 with the confidence that your data is protected by the most secure measures in the industry.
               </motion.li>
             </ul>

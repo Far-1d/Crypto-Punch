@@ -18,7 +18,7 @@ import Web3 from 'web3';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/shadcn/select';
 
 //@ts-ignore
-const {ethereum} = window;
+const {ethereum} = typeof window != 'undefined' ?window : false;
 const web3 = new Web3(ethereum);
 const Networks = {
   1: 'Ethereum mainnet',

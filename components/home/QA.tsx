@@ -29,9 +29,9 @@ const QA = () => {
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2" className='border-neutral-600'>
-                        <AccordionTrigger>I can't login to my account. what is the problem?</AccordionTrigger>
+                        <AccordionTrigger>I can&apos;t login to my account. what is the problem?</AccordionTrigger>
                         <AccordionContent>
-                        If you haven't used your account for over 3 month, due to our company policies
+                        If you haven&apos;t used your account for over 3 month, due to our company policies
                         we diable your account, though not deleted. To enable your account please follow these 
                         <a href="#" className='underline'> instructions</a>
                         </AccordionContent>
@@ -144,7 +144,7 @@ const QA = () => {
                     <AccordionItem value="item-4" className='border-neutral-600'>
                         <AccordionTrigger>Who are our intended customers?</AccordionTrigger>
                         <AccordionContent>
-                        Crypto Puch product suite has multiple use cases. Our infrastructure is designed to best serve any SMEs, enterprises or crypto-enthusiasts who need quick, secure and reliable access to top blockchain nodes. You can check our website to see the crypto and blockchain products that we offer and for any questions, don't hesitate and contact our team.
+                        Crypto Puch product suite has multiple use cases. Our infrastructure is designed to best serve any SMEs, enterprises or crypto-enthusiasts who need quick, secure and reliable access to top blockchain nodes. You can check our website to see the crypto and blockchain products that we offer and for any questions, don&apos;t hesitate and contact our team.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

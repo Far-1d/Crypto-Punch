@@ -38,7 +38,7 @@ const SignupDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
     
     const openToast = () => {
       
-      const user = getUserFromToken();
+      const user:any = getUserFromToken();
       toast("Your account created successfully", {
         description: "check your email for verification link",
         action: {
@@ -87,7 +87,7 @@ const SignupDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
         };
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/user/signup', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/signup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -25,11 +25,11 @@ const Navigation = () => {
         </div>
         <NavigationMenu className='w-full gap-28 flex justify-between'>
             <NavigationMenuList className='gap-8'>
-                <NavigationMenuItem><Link href="/news">News</Link></NavigationMenuItem>
-                <NavigationMenuItem><Link href="/assets">Assets</Link></NavigationMenuItem>
-                <NavigationMenuItem><Link href="/web3">Web 3</Link></NavigationMenuItem>
-                <NavigationMenuItem><Link href="/analytics">Analytics</Link></NavigationMenuItem>
-                <NavigationMenuItem><Link href="/about-us">About us</Link></NavigationMenuItem>
+                <NavigationMenuItem><Link href="/news" className='hover:underline'>News</Link></NavigationMenuItem>
+                <NavigationMenuItem><Link href="/assets" className='hover:underline'>Assets</Link></NavigationMenuItem>
+                <NavigationMenuItem><Link href="/web3" className='hover:underline'>Web 3</Link></NavigationMenuItem>
+                <NavigationMenuItem><Link href="/analytics" className='hover:underline'>Analytics</Link></NavigationMenuItem>
+                <NavigationMenuItem><Link href="/about-us" className='hover:underline'>About us</Link></NavigationMenuItem>
                 <NavigationMenuItem></NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>

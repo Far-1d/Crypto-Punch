@@ -28,10 +28,14 @@ export function UserNav() {
     const [isSignupOpen, setIsSignupOpen] = useState(false);
     const [isLoginOpen, setIsLoginOpen] = useState(false);
     const { user, setUser } = useAppContext();
-
+    const token_id = typeof window !== 'undefined'? sessionStorage.getItem('token'):''
     useEffect(() => {
-      setUser(getUserFromToken)
-    }, [sessionStorage.getItem('token')]);
+      // Check if the code is running in the browser
+      if (typeof window !== 'undefined') {
+        const token_id = sessionStorage.getItem('token'); // Get the token from sessionStorage
+        setUser(getUserFromToken()); // Call the function to set the user
+      }
+    }, [token_id, user, setUser]);
 
     const handleSignupOpen = (e:any) => {
       e.stopPropagation(); // Prevent dropdown from closing

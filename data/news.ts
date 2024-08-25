@@ -7,7 +7,7 @@ interface fetchNewsInterface {
 
 export async function fetch_news({page, pageSize, search, created_after}: fetchNewsInterface) {
     try {
-        let url = `http://127.0.0.1:8000/api/news?page=${page}&page_size=${pageSize}`;
+        let url = `${process.env.NEXT_PUBLIC_API_URL}/news?page=${page}&page_size=${pageSize}`;
         if (search) {
             url += `&search=${search}`;
         }
@@ -34,9 +34,9 @@ export async function fetch_news({page, pageSize, search, created_after}: fetchN
 }
 
 
-export async function fetch_single({id}:{id:string}) {
+export async function fetch_single({news_id}:{news_id:string}) {
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/news/get/${id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news/get/${news_id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export async function fetch_like({news_id, user_id}:{news_id:string,user_id:stri
             news_id:news_id,
             user_id:user_id
         };
-        const response = await fetch(`http://127.0.0.1:8000/api/news/like`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news/like`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ export async function fetch_like({news_id, user_id}:{news_id:string,user_id:stri
 
 export async function fetch_pages({pageSize}:{pageSize:string}) {
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/news/pages/${pageSize}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news/pages/${pageSize}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

@@ -1,6 +1,5 @@
 'use client';
 import { motion } from "framer-motion";
-
 import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState }    from 'react'
 import Head from "next/head";
@@ -51,7 +50,6 @@ function ClientSideProfile () {
 
                     const result = await response.json();
                     setProfile(result);
-                    console.log("----.>>   ",result)
                     setSelf(false);
                 } catch (error) {
                     setNot_found(true)
@@ -60,11 +58,11 @@ function ClientSideProfile () {
         };
 
         fetchUser();
-    }, []);
+    }, [id, setUser]);
 
     useEffect(() => {   // check self when user or profile change
         setSelf(profile.id === user.id);
-    }, [user, profile]);
+    }, [user, profile, setUser]);
 
     if (not_found && user==='') return notFound()
     

@@ -15,7 +15,7 @@ const GrowthChart = () => {
                     Delivering lightning-fast crypto API results for developers and businesses alike
                 </h1>
                 <p className='text-sm text-pretty pt-6 text-justify'>
-                We understand that in the fast-paced world of digital currencies, timely and accurate data is crucial for making informed decisions. That's why we've invested heavily in cutting-edge technology and infrastructure, ensuring that our API can handle a high volume of requests with exceptional speed and reliability.
+                We understand that in the fast-paced world of digital currencies, timely and accurate data is crucial for making informed decisions. That&apos;s why we&apos;ve invested heavily in cutting-edge technology and infrastructure, ensuring that our API can handle a high volume of requests with exceptional speed and reliability.
                 </p>
                 <Noise />
             </div>
@@ -32,7 +32,7 @@ const GrowthChart = () => {
                 <p className='text-sm text-pretty pt-6 text-justify z-10'>
                     <span>
                         we strive to make your job easier by offering a user-friendly interface and comprehensive documentation. 
-                        We recognize that navigating the complexities of cryptocurrency data can be challenging, which is why we've streamlined our services to ensure a seamless experience. 
+                        We recognize that navigating the complexities of cryptocurrency data can be challenging, which is why we&apos;ve streamlined our services to ensure a seamless experience. 
                     </span>
                     <span className='hidden md:inline'>
                         With our robust API, you can focus on what truly matters—developing innovative solutions and driving your projects forward—while we take care of the heavy lifting. 

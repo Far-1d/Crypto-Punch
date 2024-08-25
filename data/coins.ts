@@ -6,7 +6,7 @@ interface fetchCoinInterface {
 
 export async function fetch_coin({page, pageSize, search}: fetchCoinInterface) {
     try {
-        let url = `http://127.0.0.1:8000/api/asset/list?page=${page}&page_size=${pageSize}`;
+        let url = `${process.env.NEXT_PUBLIC_API_URL}/asset/list?page=${page}&page_size=${pageSize}`;
         if (search) {
             url += `&search=${search}`;
         }
@@ -31,7 +31,7 @@ export async function fetch_coin({page, pageSize, search}: fetchCoinInterface) {
 
 export async function fetch_single({id}:{id:any}) {
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/asset/get/${id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/asset/get/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ export async function add_to_favorite({asset_id, user_id}:{asset_id:string,user_
             asset_id:asset_id,
             user_id:user_id
         };
-        const response = await fetch(`http://127.0.0.1:8000/api/asset/favorite`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/asset/favorite`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ export async function check_favorite({asset_id, user_id}:{asset_id:string,user_i
             asset_id:asset_id,
             user_id:user_id
         };
-        const response = await fetch(`http://127.0.0.1:8000/api/asset/isFavorite`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/asset/isFavorite`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ export async function check_favorite({asset_id, user_id}:{asset_id:string,user_i
 
 export async function fetch_pages({pageSize}:{pageSize:string}) {
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/asset/pages/${pageSize}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/asset/pages/${pageSize}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

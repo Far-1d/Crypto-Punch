@@ -55,7 +55,7 @@ const StarButton = ({
             userChange();
         }
 
-    },[user])
+    },[user, asset_id, reverse])
 
     return (
         <div className='flex'>

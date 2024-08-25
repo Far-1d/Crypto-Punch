@@ -1,7 +1,5 @@
 "use client";
-
 import React, { forwardRef, useRef } from "react";
-
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magic/animated-beam";
 import { heroBeams } from "@/data";
@@ -22,6 +20,8 @@ const Circle = forwardRef<
     </div>
   );
 });
+
+Circle.displayName = 'Circle'; // Add this line
 
 export function AnimatedBeamDemo() {
   const containerRef = useRef<HTMLDivElement>(null);

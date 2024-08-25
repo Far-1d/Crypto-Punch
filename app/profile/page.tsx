@@ -1,4 +1,5 @@
 
+import { Suspense } from "react";
 import ClientSideProfile from "./ClientSideProfile";
 import { Metadata } from "next"
 
@@ -12,7 +13,9 @@ export default function ProfilePage() {
   return (
     <>
       <main className="flex min-h-screen flex-col items-center overflow-hidden justify-start pb-2 pt-20 px-2 bg-[#ededed] dark:bg-black">
-        <ClientSideProfile/>
+          <Suspense>
+            <ClientSideProfile/>
+          </Suspense>
       </main>
     </>
   );

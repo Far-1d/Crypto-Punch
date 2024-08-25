@@ -75,7 +75,7 @@ const Footer = () => {
             
             <h1 className='heading text-lg'>Site Map</h1>
             <div className='flex flex-col items-center justify-center gap-4 pt-6'>
-              <Link href="#" className='z-20 hover:underline'>Sign Up</Link>
+              <Link href="/signup" className='z-20 hover:underline'>Sign Up</Link>
               <Link href="#" className='z-20 hover:underline'>Pricing</Link>
               <Link href="#" className='z-20 hover:underline'>Blog</Link>
               <Link href="#" className='z-20 hover:underline'>FAQs</Link>

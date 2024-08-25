@@ -14,7 +14,7 @@ const Trustee = () => {
             <div className='flex size-[10vw] justify-center items-center' key={index}>
                 <div className='flex flex-col items-center justify-center'>
                   <Image src={item.img} alt={item.name} width={100} height={100}
-                  className={`size-[7vw] lg:size-[5vw] ${[1, 3].includes(item.id) ?
+                  className={`size-[7vw] filter grayscale lg:size-[5vw] ${[1, 3].includes(item.id) ?
                   'dark:invert' : ''}`}/>
                   <p className='text-xs sm:text-lg'>{item.name}</p>
                 </div>

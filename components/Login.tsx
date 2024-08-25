@@ -40,7 +40,7 @@ const LoginDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
         };
 
         try {
-          const response = await fetch('http://127.0.0.1:8000/api/user/login', {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/login`, {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const LoginDialog = ({isOpen, onclose}:{isOpen:boolean, onclose:any}) => {
             const errorData = await response.json();
             console.log("-----------------------       ", errorData)
             if (errorData.error) {
-              setError(errorData.error)
+              setError("something went wrong please try again later")
             } else{
               setError(null)
             }

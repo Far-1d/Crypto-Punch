@@ -2,24 +2,25 @@ import { JwtPayload, jwtDecode }  from 'jwt-decode';
 import { LogoutUser } from './logout';
 
 export function getUserFromToken() {
-    const token = sessionStorage.getItem('token'); // Retrieve the token from sessionStorage
+    if (typeof window !== 'undefined') {
+        const token = sessionStorage.getItem('token'); // Retrieve the token from sessionStorage
 
-    if (token) {
-        try {
-            const decodedToken = jwtDecode(token); // Decode the token
-            //@ts-ignore
-            if (! isTokenExpired(decodedToken)){
-                return decodedToken;
-            } else {
-                LogoutUser()
-                return ''
+        if (token) {
+            try {
+                const decodedToken = jwtDecode(token); // Decode the token
+                //@ts-ignore
+                if (! isTokenExpired(decodedToken)){
+                    return decodedToken;
+                } else {
+                    LogoutUser()
+                    return ''
+                }
+            } catch (error) {
+                console.error("Token decoding failed:", error);
+                return ''; // Return an empty object in case of error
             }
-        } catch (error) {
-            console.error("Token decoding failed:", error);
-            return ''; // Return an empty object in case of error
         }
     }
-
     return ''; // Return an empty object if token doesn't exist
 }
 

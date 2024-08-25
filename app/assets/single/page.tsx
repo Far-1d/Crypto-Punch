@@ -1,6 +1,7 @@
 import { fetch_single } from "@/data/coins";
 import ClientSideSingleAsset from "./ClientSideSingleAsset";
 import type { Metadata, ResolvingMetadata } from 'next'
+import { Suspense } from "react";
 
 type Props = {
     searchParams: { [id: string]: string | string[] | undefined }
@@ -25,7 +26,9 @@ type Props = {
 export default function AssetsSinglePage() {
     return (
         <main className="flex min-h-screen flex-col items-center overflow-hidden justify-start pb-2 pt-20 px-2 bg-[#ededed] dark:bg-black">
-            <ClientSideSingleAsset/>
+            <Suspense>
+              <ClientSideSingleAsset/>
+            </Suspense>
         </main>
   );
 }

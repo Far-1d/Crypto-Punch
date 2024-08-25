@@ -14,7 +14,7 @@ import { toast } from "sonner";
 
 const ClientSideSingle = () => {
   const { user, setUser } = useAppContext();
-  const [news, setNews] = useState([]); // State to hold news data
+  const [news, setNews] = useState<any>([]); // State to hold news data
   const [likeCount, setLikeCount] = useState(); // State to hold news data
   const [loading, setLoading] = useState(true); // State to manage loading status
   const [isLiked, setIsLiked] = useState('');
@@ -23,45 +23,32 @@ const ClientSideSingle = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
 
-  if (id === "")
-  {
-    return notFound();
-  }
-
   useEffect(() => {
-    const loadNews = async () => {
-        const data = await fetch_single({id}); // Fetch news data
-        
-        const content = data.content;
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = content;
+    if (id!=null){
+      const loadNews = async () => {
+          const news_id = id;
+          const data = await fetch_single({news_id}); // Fetch news data
+          
+          const content = data.content;
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = content;
 
-        // Select all h2 tags and add a class name to each
-        const h2Tags = tempDiv.querySelectorAll('h2');
-        h2Tags.forEach(h2 => {
-          h2.classList.add('text-xl', 'font-semibold', 'pt-3');
-        });
-        
-        // // Create the new element you want to add
-        // const newElement = document.createElement('div');
-        // newElement.className = 'new-class';
-        // newElement.textContent = 'This is a new element';
+          // Select all h2 tags and add a class name to each
+          const h2Tags = tempDiv.querySelectorAll('h2');
+          h2Tags.forEach(h2 => {
+            h2.classList.add('text-xl', 'font-semibold', 'pt-3');
+          });
 
-        // // Select all h2 tags and insert the new element before the second h2 tag
-        // const h2Tags = tempDiv.querySelectorAll('h2');
-        // if (h2Tags.length > 1) {
-        //   h2Tags[1].parentNode.insertBefore(newElement, h2Tags[1]);
-        // }
+          setUpdatedContent(tempDiv.innerHTML);
 
-        setUpdatedContent(tempDiv.innerHTML);
-
-        setLikeCount(data.likes.length);
-        setNews(data); // Set the fetched data to state
-        setLoading(false); // Set loading to false once data is fetched
-    };
-    
-    loadNews(); // Call the function to load news
-}, []);
+          setLikeCount(data.likes.length);
+          setNews(data); // Set the fetched data to state
+          setLoading(false); // Set loading to false once data is fetched
+      };
+      
+      loadNews(); // Call the function to load news
+  }
+}, [id]);
 
   useEffect(() => {
     setIsLiked('');
@@ -85,8 +72,11 @@ const ClientSideSingle = () => {
       if (user){
         const user_id = user.id;
         const news_id = id ? id : searchParams.get("id");
+        if(news_id === null) {
+          return notFound();
+        }
         const data = await fetch_like({news_id, user_id});
-        const newss = await fetch_single({id});
+        const newss = await fetch_single({news_id});
         console.log(data)
         if (data.message != "error"){
           setLikeCount(newss.likes.length);
@@ -103,6 +93,11 @@ const ClientSideSingle = () => {
     };
     loadLike();
 }, [liking, id]);
+
+  if (id === "" || id===null)
+  {
+    return notFound();
+  }
 
   if (loading) {
       return <div className="h-screen w-full flex items-center justify-center text-xl"><p>Loading...</p></div>; // Show loading message while fetching data

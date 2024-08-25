@@ -53,39 +53,39 @@ export function AnimatedBeamMultipleOutputDemo({
       <div className="flex size-full flex-row items-stretch justify-between gap-10 max-w-lg">
         <div className="flex flex-col justify-center gap-2">
           <Circle ref={div1Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-            <img src="coingecko.svg" alt="" width={'40px'} height={'40px'}
+            <Image src="coingecko.svg" alt="" width={40} height={40}
             className="h-[42px] w-[42px] sm:h-full sm:w-full"/>
           </Circle>
           <Circle ref={div2Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-            <img src="crypto-com.svg" alt="" width={'40px'} height={'40px'}/>
+            <Image src="crypto-com.svg" alt="" width={40} height={40}/>
           </Circle>
           <Circle ref={div3Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-            <img src="crypto-apis.svg" alt="" width={'40px'} height={'40px'}/>
+            <Image src="crypto-apis.svg" alt="" width={40} height={40}/>
           </Circle>
           <Circle ref={div4Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-            <img src="base.svg" alt="" width={'40px'} height={'40px'}/>
+            <Image src="base.svg" alt="" width={40} height={40}/>
           </Circle>
           <Circle ref={div5Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-            <img src="coinMarketCap.svg" alt="" width={'40px'} height={'40px'}/>
+            <Image src="coinMarketCap.svg" alt="" width={40} height={40}/>
           </Circle>
         </div>
         <div className="flex flex-col justify-center">
           <Circle ref={div6Ref} className="size-12 sm:size-16" >
-          <img src="logo.svg" alt="" width={'40px'} height={'40px'}/>
+          <Image src="logo.svg" alt="" width={40} height={40}/>
           </Circle>
         </div>
         <div className="flex flex-col justify-center gap-2">
           <Circle ref={div7Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-          <img src="user.svg" alt="" width={'40px'} height={'40px'}/>
+          <Image src="user.svg" alt="" width={40} height={40}/>
           </Circle>
           <Circle ref={div8Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-          <img src="user.svg" alt="" width={'40px'} height={'40px'}/>
+          <Image src="user.svg" alt="" width={40} height={40}/>
           </Circle>
           <Circle ref={div9Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-          <img src="user.svg" alt="" width={'40px'} height={'40px'}/>
+          <Image src="user.svg" alt="" width={40} height={40}/>
           </Circle>
           <Circle ref={div10Ref} className="size-9 sm:size-[50px] p-1 sm:p-2">
-          <img src="user.svg" alt="" width={'40px'} height={'40px'}/>
+          <Image src="user.svg" alt="" width={40} height={40}/>
           </Circle>
         </div>
       </div>

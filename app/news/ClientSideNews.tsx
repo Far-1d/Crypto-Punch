@@ -111,7 +111,7 @@ const ClientSideNews = () => {
                     </h1>
                     <div className="p-4 flex flex-row justify-between items-center w-full">
                       <small>{news.writer ? <Link href={`/profile?id=${news.writer.id}`} className="hover:underline">{news.writer.username}</Link> : "admin" }</small>
-                      <small>{news.published_at}</small>
+                      <small>{news.publish}</small>
                     </div>
                   </Link>
                 </motion.div>
@@ -119,18 +119,21 @@ const ClientSideNews = () => {
             ))}
           </section>
           <div className="pagination flex flex-col items-center justify-center w-full mb-10">
-              <div className="flex items-center justify-end w-full px-4 sm:px-20">
-                <span className="px-2">News per page</span>
-                <Select onValueChange={handleValueChange} value={pageSize}>
-                  <SelectTrigger className="w-[80px]">
-                    <SelectValue placeholder="NPP" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="12">12</SelectItem>
-                    <SelectItem value="24">24</SelectItem>
-                    <SelectItem value="48">48</SelectItem>
-                  </SelectContent>
-                </Select>
+              <div className="flex items-center justify-between w-full px-4 sm:px-20">
+                <p className="font-light">more at <a className="hover:underline font-semibold" href="https://crypto.news">crypto.news</a></p>
+                <div>
+                  <span className="px-2">News per page</span>
+                  <Select onValueChange={handleValueChange} value={pageSize}>
+                    <SelectTrigger className="w-[80px]">
+                      <SelectValue placeholder="NPP" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="12">12</SelectItem>
+                      <SelectItem value="24">24</SelectItem>
+                      <SelectItem value="48">48</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
               <div className="flex pt-8">
                 <Pagination>

@@ -82,7 +82,7 @@ const ClientSideRefund = () => {
                         <p className="text-base">
                             To request a refund, please follow these steps:
                             <ul className="ml-6 list-disc [&>li]:mt-2">
-                                <li>Go to <Link href="/support"  className="underline">support</Link> page and choose "Refund Request" from subject.</li>
+                                <li>Go to <Link href="/support"  className="underline">support</Link> page and choose &quot;Refund Request&quot; from subject.</li>
                                 <li>Include your order number and the reason for your refund in detail.</li>
                                 <li>Processing may take up to 48 hour to answer, be patient and wait for our email.</li>
                             </ul>

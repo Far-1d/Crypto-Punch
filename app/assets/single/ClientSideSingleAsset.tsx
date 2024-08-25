@@ -30,18 +30,22 @@ const ClientSideSingleAsset = () => {
     const searchParams = useSearchParams();
     const id = searchParams.get("id") ? searchParams.get("id"): "";
 
-    if (id=== ""){
-        return notFound();
-    }
+    
     useEffect(()=>{
+      if (id !== "") {
         const GetAsset = async () => {
             const data = await fetch_single({id}); // Fetch Asset data
             setAsset(data); // Set the fetched data to state
         };
     
         GetAsset();
+      }
     }, [id, user])
     
+    if (id === ""){
+      return notFound();
+    }
+
   return (
     <div className='w-full px-4 mb-10'>
       <div className='grid grid-cols-3 grid-rows-[13] sm:grid-rows-8 gap-6'>

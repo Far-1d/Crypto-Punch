@@ -109,7 +109,7 @@ export function WobbleCardDemo() {
             Never go for less
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            Compare our services, if you find better ones you'd recieve a free 6 month premium plan. rest asure you can't :)
+            Compare our services, if you find better ones you&apos;d recieve a free 6 month premium plan. rest asure you can&apos;t :)
           </p>
         </WobbleCard>
         <WobbleCard containerClassName="group col-span-1 md:col-span-3 bg-neutral-950 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
