@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const GrowthChart = () => {
 
   return (
-    <div className='flex flex-col items-center justify-center px-8 sm:px-16 pt-12 mx-2'>
+    <div className='flex flex-col items-center justify-center px-4 sm:px-16 pt-12 mx-2'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
             <div 
             className='overflow-hidden relative col-span-1 order-0

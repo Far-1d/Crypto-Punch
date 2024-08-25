@@ -67,6 +67,9 @@ const Footer = () => {
                 <span className='text-xs font-thin'>
                     PRIVATE LIMITED
                 </span>
+                <span className='text-xs font-light'>
+                    made with ❤️ by Farid
+                </span>
               </div>
             </div>
           </div>

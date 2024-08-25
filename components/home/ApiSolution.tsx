@@ -13,7 +13,7 @@ const ApiSolution = () => {
               </span>
             </p>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 w-full px-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 w-full px-6'>
           <div className='bg-neutral-400 dark:bg-neutral-900 relative p-1 sm:p-10 rounded-3xl
           flex flex-col md:flex-row lg:flex-col items-center justify-center sm:m-8 mt-6 lg:mt-0
           overflow-hidden [background-image:radial-gradient(68%_80%_at_top,rgba(255,255,255,0.6),rgba(155,155,155,0))]

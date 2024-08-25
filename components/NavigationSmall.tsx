@@ -17,7 +17,7 @@ const NavigationSmall = () => {
     <div className='fixed w-full top-0 left-0 z-20'>
         <Dialog>
             <DialogTrigger >
-                <button className="px-6 py-4 text-black dark:text-white rounded-lg font-bold transform hover:translate-x-1 transition duration-400">
+                <button className="px-6 py-5 text-black dark:text-white rounded-lg font-bold transform hover:translate-x-1 transition duration-400">
                     <LuAlignJustify/>
                 </button>
             </DialogTrigger>

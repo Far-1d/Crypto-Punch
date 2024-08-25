@@ -13,11 +13,11 @@ const ClientSideSignup = () => {
         
   return (
     <div className="flex flex-row w-full h-full relative">
-        <div className={`z-0 absolute sm:relative w-full h-screen pb-10 flex flex-col items-start justify-end bg-[url("/s2.jpg")] bg-cover`}>
-            <div className="flex m-4 ">
+        <div className={`z-0 absolute sm:relative w-full h-screen pb-10 flex flex-col items-start justify-end bg-[url("/s2.jpg")] bg-contain sm:bg-cover bg-no-repeat`}>
+            <div className={`${!user && 'hidden sm:block'} flex m-4 `}>
                 <h1 className="max-w-96 text-lg leading-relaxed text-white"><Quote className="w-3 h-3 inline mb-2 rotate-180"/> If you only read the books that everyone else is reading, you can only think what everyone else is thinking. <Quote className="w-3 h-3 inline mb-2"/></h1>
             </div>
-            <p className="mx-4 text-white">- Haruki Murakami <small>Norwegian Wood</small></p>
+            <p className={`${!user && 'hidden sm:block'} mx-4 text-white`}>- Haruki Murakami <small>Norwegian Wood</small></p>
         </div>
         <div className=" z-10 w-full h-screen pb-10">
             <div className="mx-auto mt-2 ">

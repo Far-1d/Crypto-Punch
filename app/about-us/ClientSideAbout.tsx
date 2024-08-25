@@ -23,8 +23,8 @@ const ClientSideAbout = () => {
       word="About Us"
       className="text-4xl font-bold text-black dark:text-white"
       />
-      <TracingBeam className="px-6">
-        <section className="grid-cols-1 w-full px-4">
+      <TracingBeam className="px-3 sm:px-6">
+        <section className="grid-cols-1 w-full px-0 sm:px-4">
             <div className="col-span-1 grid grid-cols-3 my-20 px-4 md:px-12 w-full ">
               <div className="overflow-hidden col-span-3 sm:col-span-1 flex items-center justify-center">  
                 <motion.h1 
@@ -48,7 +48,7 @@ const ClientSideAbout = () => {
                     whileInView={{ x: 0, opacity: 1 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }}
-                    className="text-base lg:text-xl text-justify">
+                    className="text-sm lg:text-xl">
                     At Crypto Punch, we pride ourselves on being a leading cryptocurrency API 
                     service provider dedicated to delivering fast, secure, and reliable solutions 
                     for developers, businesses, and individuals alike. With three years of 
@@ -76,7 +76,7 @@ const ClientSideAbout = () => {
                     whileInView={{ x: 0, opacity: 1 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }}
-                    className="text-base lg:text-xl text-justify">
+                    className="text-sm lg:text-xl">
                       Our commitment to excellence is reflected in our robust infrastructure and 
                       user-friendly API design. We have built a platform that not only simplifies 
                       access to critical blockchain data but also enhances the development 
@@ -124,7 +124,7 @@ const ClientSideAbout = () => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.5 }}
-                  className="text-base lg:text-xl text-justify">
+                  className="text-sm lg:text-xl">
                     Collaboration is at the heart of what we do at Crypto Punch. We have 
                     partnered with numerous prominent projects across the globe, which has 
                     enriched our offerings and allowed us to stay at the forefront of the 
@@ -178,7 +178,12 @@ const ClientSideAbout = () => {
           </div>
         </section>
         
-        <section className='flex w-full max-h-80 px-4 py-10 overflow-hidden'>
+        <section className='flex flex-col w-full max-h-80 px-4 py-10 overflow-hidden space-y-6'>
+            <h1 className="text-3xl sm:text-5xl font-bold text-black dark:text-white w-full text-center">
+              Here {''}
+              <span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-400 dark:from-teal-300 to-indigo-600 dark:to-indigo-500'>We Are</span>
+            </h1>
+          
             <Map/>
         </section>
       </TracingBeam>

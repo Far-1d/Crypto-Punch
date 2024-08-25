@@ -3,6 +3,7 @@ import { WavyBackground } from "../aceternity/wavy-background";
 import WordRotate from '../magic/word-rotate';
 import { cn } from "@/lib/utils";
 import Image from 'next/image';
+import { ScrollToMidButton } from '../aceternity/scrollUp';
 // import { AnimatedBeamDemo } from '../magic/beam';
 
 const Hero = () => {
@@ -23,11 +24,13 @@ const Hero = () => {
                   </div>
                   <div className='h-10'>
                     <WordRotate
-                      className="inline text-xl sm:text-4xl text-black dark:text-white"
+                      className="inline text-2xl font-semibold sm:text-4xl"
                       words={["Market News", "Blockchain Data", "Onboard Chart", "Asset Analytic"]}  
                     />
                   </div>
-                  <span className='pt-10 sm:pt-16 w-1/2 text-sm text-center'>Our goal is to bring you simple Crypto data using different API endpoints. scroll down and use our integrated Crypto functionalities.</span>
+                  <span className='pt-14 sm:pt-16 w-2/3 text-base text-center'>Our goal is to bring you simple Crypto data using different API endpoints.</span>
+                  {/* <span className='pt-4 w-1/2 text-base text-center'>scroll down to see more</span> */}
+                  <ScrollToMidButton/>
                   
               </div>
 

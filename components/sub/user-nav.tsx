@@ -35,7 +35,7 @@ export function UserNav() {
         const token_id = sessionStorage.getItem('token'); // Get the token from sessionStorage
         setUser(getUserFromToken()); // Call the function to set the user
       }
-    }, [token_id, user, setUser]);
+    }, [token_id]);
 
     const handleSignupOpen = (e:any) => {
       e.stopPropagation(); // Prevent dropdown from closing
